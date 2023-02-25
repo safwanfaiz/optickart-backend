@@ -1,7 +1,9 @@
 const mongoose = require("mongoose");
 
 const signupSchema = mongoose.Schema({
-  name: String,
+  first_name: String,
+  last_name: String,
+  ph_no: Number,
   email: String,
   password: String,
 },{versionKey:false},);
