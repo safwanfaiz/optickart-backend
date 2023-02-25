@@ -28,6 +28,14 @@ ProductRouter.get("/", async (req, res) => {
     }
 });
 
+ProductRouter.get("/:id", async (req, res) => {
+    let id=req.params.id;
+    id.toString()
+    let product = await ProductModel.find({_id:id});
+    res.send(product);
+  });
+
+
 ProductRouter.delete("/delete/:id", async (req, res) => {
     const id = req.params.id;
 
