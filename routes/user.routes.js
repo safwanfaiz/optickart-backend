@@ -12,7 +12,7 @@ UserRouter.get("/",(req,res)=>{
 })
 //sign up
 UserRouter.post("/signup", async (req, res) => {
-    const { name, email, password } = req.body; 
+    const { first_name,last_name,ph_no, email, password } = req.body; 
     try {
         // we store hash in password DB.
         bcrypt.hash(password, 6, async (err, hash) => {
@@ -21,8 +21,10 @@ UserRouter.post("/signup", async (req, res) => {
                 console.log(err);
             } else {
                 const newData = new signupModel({
-                    name,
+                    first_name,
+                    last_name,
                     email,
+                    ph_no,
                     password: hash,
                 });
                 await newData.save();
