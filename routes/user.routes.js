@@ -13,7 +13,7 @@ UserRouter.post("/signup", async (req, res) => {
     const { name, email, password } = req.body;
     try {
         // we store hash in password DB.
-        bcrypt.hash(password, 7, async (err, hash) => {
+        bcrypt.hash(password, 6, async (err, hash) => {
 
             if (err) {
                 console.log(err);
