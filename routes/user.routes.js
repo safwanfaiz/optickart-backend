@@ -43,7 +43,7 @@ UserRouter.post("/login", async (req, res) => {
 
                 if (result) {
                     const token = jwt.sign({ userID: user[0]._id }, process.env.KEY);
-                    res.send({ status: "login successful", token: token });
+                    res.send({ status: "login successful", token: token,name:user[0].name });
                 } else {
                     res.send("not authorised");
                 }
