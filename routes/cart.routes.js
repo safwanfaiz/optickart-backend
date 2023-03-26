@@ -10,7 +10,7 @@ CartRouter.post("/post", async (req, res) => {
     try {
         await CartModel.insertMany(data);
 
-        res.send(" Cart data has been sent successfully");
+        res.send(" Cart data has been sent successfully at place");
     } catch (error) {
         res.send("error");
     }
@@ -33,7 +33,7 @@ CartRouter.delete("/delete/:id", async (req, res) => {
 
     try {
         await CartModel.findByIdAndDelete({ _id: id });
-        res.send(" cart data has been deleted successfully");
+        res.send(" cart data has been deleted successfully from ther");
     } catch (error) {
         console.log(error);
     }
