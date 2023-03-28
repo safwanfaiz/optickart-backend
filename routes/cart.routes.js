@@ -33,7 +33,7 @@ CartRouter.delete("/delete/:id", async (req, res) => {
 
     try {
         await CartModel.findByIdAndDelete({ _id: id });
-        res.send(" cart data has been deleted successfully from ther");
+        res.send(" cart data has been deleted successfully");
     } catch (error) {
         console.log(error);
     }
