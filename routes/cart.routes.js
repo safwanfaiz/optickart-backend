@@ -58,7 +58,7 @@ CartRouter.patch("/update/:id", async (req, res) => {
       await CartModel.findByIdAndUpdate({ _id: id }, req.body);
       res.send("user data updated successfully");
     } catch (error) {
-      res.send({ msg: "something went wrong", error: error.message });
+      res.send({ msg: "something went wrong please provide proper details", error: error.message });
     }
   });
 
