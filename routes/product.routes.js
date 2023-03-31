@@ -10,7 +10,7 @@ ProductRouter.post("/post", async (req, res) => {
     try {
         await ProductModel.insertMany(data);
 
-        res.send("data has been sent");
+        res.send("data has been sent successfully");
     } catch (error) {
         res.send({"msg":"Something went wrong here","error":error.message});
     }
