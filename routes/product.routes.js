@@ -12,7 +12,7 @@ ProductRouter.post("/post", async (req, res) => {
 
         res.send("data has been sent");
     } catch (error) {
-        res.send({"msg":"Something went wrong","error":error.message});
+        res.send({"msg":"Something went wrong here","error":error.message});
     }
 });
 
